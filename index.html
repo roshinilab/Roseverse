@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RoseVerse 2.0 | Tulip Edition</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d68da5">
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<aside class="sidebar">
+    <h2>🌷 RoseVerse</h2>
+    <p class="sub">Bloom at your own pace</p>
+
+    <nav>
+        <a href="#home">🏡 Dashboard</a>
+        <a href="#timer">⏳ Study Room</a>
+        <a href="#tasks">✅ My Tasks</a>
+        <a href="#stats">📊 Analytics</a>
+        <a href="#calendar">📅 Calendar</a>
+        <a href="#notes">📝 Journal</a>
+        <a href="#rewards">🏆 Achievements</a>
+    </nav>
+
+    <button id="themeBtn">🌙 Change Theme</button>
+</aside>
+
+<main>
+
+<header id="home">
+    <div>
+        <p id="today"></p>
+        <h1>Hello, Beautiful Soul! 🌷</h1>
+        <p>Your dreams deserve your dedication.</p>
+    </div>
+
+    <button id="motivate">💗 I Feel Low</button>
+</header>
+
+<section class="stats">
+
+    <article>
+        <span>📚</span>
+        <p>Total Study Time</p>
+        <h2 id="hours">0h 0m</h2>
+    </article>
+
+    <article>
+        <span>🔥</span>
+        <p>Study Streak</p>
+        <h2 id="streak">0 Days</h2>
+    </article>
+
+    <article>
+        <span>✅</span>
+        <p>Tasks Completed</p>
+        <h2 id="done">0</h2>
+    </article>
+
+    <article>
+        <span>🎯</span>
+        <p>Daily Goal</p>
+        <h2 id="progress">0%</h2>
+    </article>
+
+</section>
+
+<section class="box" id="timer">
+    <h2>⏳ Focus Study Room</h2>
+
+    <input id="subject" placeholder="Enter your subject">
+
+    <div id="clock">00:00:00</div>
+
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="save">Save Session</button>
+    <button id="reset">Reset</button>
+</section>
+
+<section class="box" id="tasks">
+    <h2>🌸 My Daily Tasks</h2>
+
+    <input id="taskName" placeholder="Enter task">
+    <input id="deadline" type="date">
+
+    <select id="priority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+    </select>
+
+    <button id="addTask">+ Add Task</button>
+
+    <div id="taskList"></div>
+</section>
+
+<section class="box" id="stats">
+    <h2>📊 Weekly Study Analytics</h2>
+    <canvas id="studyChart"></canvas>
+</section>
+
+<section class="box" id="calendar">
+    <h2>📅 Events & Deadlines</h2>
+
+    <input id="eventName" placeholder="Event name">
+    <input id="eventDate" type="date">
+    <input id="eventTime" type="time">
+
+    <button id="addEvent">Add Event</button>
+
+    <div id="eventList"></div>
+</section>
+
+<section class="box" id="notes">
+    <h2>📝 My Personal Journal</h2>
+
+    <textarea id="journal" placeholder="Write your thoughts, learning and reflections..."></textarea>
+
+    <button id="saveJournal">Save Journal</button>
+</section>
+
+<section class="box" id="rewards">
+    <h2>🏆 My Achievements</h2>
+    <div id="badges">🌱 Your achievements will appear here.</div>
+</section>
+
+<section class="box motivation">
+    <h2>💗 A Little Reminder</h2>
+    <p id="quote"></p>
+    <button id="newQuote">New Motivation ✨</button>
+</section>
+
+</main>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>🌷 A Message for You</h2>
+        <p id="popupText"></p>
+        <button id="closePopup">Continue Blooming 💗</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("./sw.js")
+        .then(() => console.log("🌷 RoseVerse is ready!"))
+        .catch(error => console.error(error));
+}
+</script>
+</body>
+</html>

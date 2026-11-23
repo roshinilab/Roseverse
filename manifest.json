@@ -1,0 +1,18 @@
+{
+  "name": "RoseVerse",
+  "short_name": "RoseVerse",
+  "description": "Your personal study and productivity garden",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#faf6f1",
+  "theme_color": "#d68da5",
+  "icons": [
+    {
+      "src": "icons/tulip.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
